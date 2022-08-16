@@ -1,4 +1,4 @@
-package com.tangzhang;
+package com.tangzhang.jul;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,6 +1,4 @@
-package com.tangzhang;
-
-import java.util.logging.Logger;
+package com.tangzhang.jul;
 
 public class Main {
     private static final Integer COUNT = 100;
