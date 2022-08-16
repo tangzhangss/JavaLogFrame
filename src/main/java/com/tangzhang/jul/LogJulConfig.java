@@ -6,10 +6,7 @@ import java.io.IOException;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-public final class StaticLog {
-    private StaticLog() {}
-
-    private static Logger logger = Logger.getLogger(StaticLog.class.getPackage().getName());
+public final class LogJulConfig{
 
     static {
         LogManager logManager = LogManager.getLogManager();
@@ -29,37 +26,5 @@ public final class StaticLog {
             //加载日志配置文件失败
             e.printStackTrace();
         }
-    }
-
-    public void setLogger(String name){
-        logger = Logger.getLogger(name);
-    }
-
-    public static StaticLog logger(String name){
-        StaticLog staticLog = new StaticLog();
-        staticLog.setLogger(name);
-        return staticLog;
-    }
-
-    public static void info(String msg){
-        logger.info(msg);
-    }
-    public static void severe(String msg){
-        logger.severe(msg);
-    }
-    public static void config(String msg){
-        logger.config(msg);
-    }
-    public static void finer(String msg){
-        logger.finer(msg);
-    }
-    public static void fine(String msg){
-        logger.fine(msg);
-    }
-    public static void finest(String msg){
-        logger.finest(msg);
-    }
-    public static void warning(String msg){
-        logger.warning(msg);
     }
 }
