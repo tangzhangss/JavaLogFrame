@@ -14,7 +14,7 @@ public final class LogJulConfig{
             String userDIR = System.getProperty("user.dir");
             logManager.readConfiguration(new FileInputStream(userDIR+"/src/main/resources/logger-jul.properties"));
 
-            //判断日志文件目录是否存在--存在就创建目录
+            //判断日志文件目录是否存在--bu存在就创建目录
             final String filePattern = logManager.getProperty("java.util.logging.FileHandler.pattern");
             File logDir =  new File(filePattern).getParentFile();
             if(!logDir.exists()) {
@@ -27,4 +27,6 @@ public final class LogJulConfig{
             e.printStackTrace();
         }
     }
+
+    public static void init() {}
 }

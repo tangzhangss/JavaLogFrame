@@ -6,6 +6,12 @@ public class Main {
     private static final Integer COUNT = 100;
     private static Logger logger =  Logger.getLogger(Main.class.getName());
 
+    static {
+        //需要加载jul配置
+        LogJulConfig.init();
+    }
+
+
     public static void main(String[] args) {
         new Thread(()->{
             printInfo();
